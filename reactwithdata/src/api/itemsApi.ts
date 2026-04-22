@@ -3,7 +3,7 @@ import axios from "axios";
 //Listsustab HTTP päringuid, pakub paremat sütaksit
 //veakäsitlus on olemas
 
-const API = "http://localhost:4000/api/items"
+const API = "http://localhost:5173/api/items"
 
 export const fetchItems = () => axios.get(API);
 export const createItem = (name: string) => axios.post(API, { name })
