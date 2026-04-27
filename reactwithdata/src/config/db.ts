@@ -1,9 +1,14 @@
 import sql from "mssql"
 
 export const dbConfig: sql.config = {
-    user: "paneEndaArvutiNimi",
-    server: "",
-    password: ""
+    user: "Admin",
+    server: "localhost",
+    password: "password",
+    database: "ReactData",
+    options: {
+        encrypt: false,
+        trustServerCertificate: true,
+    }
     //pärast saab juurde kirjutada.
 }
 
