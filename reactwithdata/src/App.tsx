@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ItemForm from './components/ItemForm';
 import ItemList from './components/ItemList';
-import * as api from "./api/itemsApi";
+import * as api from "./api/itemsApi.ts";
 import './App.css'
 
 export default function App() {
