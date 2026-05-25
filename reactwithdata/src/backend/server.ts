@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import router from "../routes/items.ts"
-import { dbConfig } from "../config/db.ts";
 import sql from "mssql"
 
 
@@ -13,12 +12,10 @@ app.use(express.json());
 
 app.use("/api/items", router);
 
-sql.connect(dbConfig, (err?: Error | undefined) => {
-    if (err) {
-        throw err;
-    }
-    console.log("")
-})
+sql.use(((req: { method: any; url: any; }, _: any, next: () => void) => {
+    console.log(`SQL Request: ${req.method} ${req.url}`);
+    next();
+}));
 
 app.listen(port, () => {
     console.log(`Server käivitatud pordilt: ${port}`)
