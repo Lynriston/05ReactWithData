@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ItemForm from './components/ItemForm';
 import ItemList from './components/ItemList';
 import * as api from "./api/itemsApi.ts";
@@ -11,6 +11,10 @@ export default function App() {
     const res = await api.fetchItems();
     setItems(res.data);
   }
+
+  useEffect(() => {
+    load();
+  }, [])
 
   return (
     <div>

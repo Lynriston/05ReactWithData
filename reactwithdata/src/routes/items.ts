@@ -7,9 +7,8 @@ const router = Router();
 
 router.get("/", controller.getItems);
 router.post("/", controller.createItem);
-router.post("/:id", controller.removeItem);
-router.post("/:id", controller.editItem);
+router.delete("/:id", controller.removeItem);
+router.put("/:id", controller.editItem);
 
 
 export default router;
-
