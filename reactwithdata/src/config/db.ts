@@ -2,8 +2,8 @@ import sql from "mssql"
 
 export const dbConfig: sql.config = {
     user: "sa",
-    server: "localhost",
-    password: "",
+    server: "(localdb)\MSSQLLocalDB",
+    password: "12345678",
     database: "ReactData",
     options: {
         encrypt: true,
