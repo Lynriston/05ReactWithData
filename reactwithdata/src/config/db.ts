@@ -2,7 +2,7 @@ import sql from "mssql"
 
 export const dbConfig: sql.config = {
     user: "sa",
-    server: "(localdb)\MSSQLLocalDB",
+    server: "localhost",
     password: "12345678",
     database: "ReactData",
     options: {

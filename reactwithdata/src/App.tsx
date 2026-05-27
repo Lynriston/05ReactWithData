@@ -9,7 +9,7 @@ export default function App() {
 
   const load = async () => {
     const res = await api.fetchItems();
-    setItems(res.data.items);
+    setItems(res.data);
   }
 
   
