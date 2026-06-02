@@ -8,7 +8,7 @@ export const getItems = async (_: Request, res: Response) => {
 
 export const createItem = async (req: Request, res: Response) => {
     await service.addItem(req.body.name);
-    res.sendStatus(201);  // 201 on kood created
+    res.sendStatus(201); //201 on kood created
 }
 
 export const removeItem = async (req: Request, res: Response) => {

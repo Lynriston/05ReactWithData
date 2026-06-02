@@ -1,12 +1,13 @@
 import sql from "mssql"
 
+
 export const dbConfig: sql.config = {
-    user: "sa",
-    server: "localhost",
-    password: "12345678",
-    database: "ReactData",
+    user: 'risto', // SQL andmebaasi kasutaja, mitte WIN kasutaja.
+    password: '1234', // kasutaja parool
+    server: 'localhost', // Serveri nimi
+    database: 'ReactData', // Olemas olev andmebaas kuhu muudatusi teha
     options: {
-        encrypt: true,
+        encrypt: false,
         trustServerCertificate: true,
     }
 }

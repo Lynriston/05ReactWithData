@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import * as api from './api/itemsApi';
+import * as api from './api/itemsApi.ts';
 import ItemForm from './components/ItemForm';
 import ItemList from './components/ItemList';
 

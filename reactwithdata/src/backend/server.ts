@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import itemRouters from '../routes/items.ts';
+import router from '../routes/items.ts';
 
 const app = express();
 
@@ -12,7 +12,7 @@ app.use((req, _, next) => {
 app.use(cors());
 app.use(express.json());
 
-app.use('/api/items', itemRouters);
+app.use('/api/items', router);
 
-const PORT = "http://localhost:5000/api/items";
+const PORT = 5000;
 app.listen(PORT, () => console.log(`Server töötab pordil ${PORT}`));
